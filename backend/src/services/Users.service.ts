@@ -1,12 +1,14 @@
 import connection from '../config/Connection'
-import { Response } from 'express'
 
-export function getUsers(res: Response) {
-  const test = connection.query('SELECT id, name FROM users', (err, rows) => {
-    if (err) {
-      res.status(500).json({ err })
-      throw err
-    }
-    return res.status(200).json({ users: rows })
+function getUsers() {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT id, name, password FROM users', (err, rows) => {
+      if (rows === undefined) {
+        reject(new Error('Rows is undefined'))
+      } else {
+        resolve(rows)
+      }
+    })
   })
 }
+export { getUsers }

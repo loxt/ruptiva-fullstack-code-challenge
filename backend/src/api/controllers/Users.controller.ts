@@ -3,6 +3,8 @@ import { getUsers } from '../../services/Users.service'
 
 export class UsersController {
   async index(req: Request, res: Response) {
-    return getUsers(res)
+    const users = await getUsers()
+    console.log(users)
+    return res.status(200).json({ users })
   }
 }
