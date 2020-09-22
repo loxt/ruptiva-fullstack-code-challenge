@@ -8,7 +8,9 @@ import {
   Items,
   Manufacturer,
   Name,
-  Price
+  Price,
+  Button,
+  Infos
 } from './styles'
 
 export default function Home() {
@@ -18,10 +20,83 @@ export default function Home() {
       <Items>
         <Item>
           <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
-          <Name>name</Name>
-          <Manufacturer>Manufacturer</Manufacturer>
-          <HorsePower>hp</HorsePower>
-          <Price>price</Price>
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
+        </Item>
+        <Item>
+          <Image src='https://www.motos.com.br/thumbs/1366x768/fd/4db902c409d0547275fbda13208c68158ad2782d1b988a227902ae1c011126.jpg' />
+          <Infos>
+            <Name>CG 150</Name>
+            <Manufacturer>Honda</Manufacturer>
+            <HorsePower>149cc</HorsePower>
+            <Price>R$ 4500,00</Price>
+          </Infos>
+          <Button>Comprar</Button>
         </Item>
       </Items>
     </Container>
