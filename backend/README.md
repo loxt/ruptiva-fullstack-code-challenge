@@ -19,16 +19,16 @@ Para criar o banco de dados, necessitamos do **Docker** e **docker-compose**!
      `hp` double(6, 1) NOT NULL,
      `price` double(20, 2) NOT NULL,
      PRIMARY KEY (`id`)
-   ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+   ) ENGINE=MyISAM  DEFAULT CHARSET=utf8
     ``<br />
     
   Copie tudo pra criar a tabela "users":<br />
   ``CREATE TABLE IF NOT EXISTS `users` (
      `id` int(10) NOT NULL AUTO_INCREMENT,
-     `name` varchar(150) NOT NULL,
+     `name` varchar(150) UNIQUE NOT NULL,
      `password` varchar(150) NOT NULL,
      PRIMARY KEY (`id`)
-   ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+   ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
     ``
     
      

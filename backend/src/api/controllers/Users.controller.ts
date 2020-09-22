@@ -5,7 +5,6 @@ import { User } from '../../services/entities/User.entity'
 export default {
   async index(req: Request, res: Response) {
     const users = await getUsers()
-    console.log(users)
     return res.status(200).json({ users })
   },
 

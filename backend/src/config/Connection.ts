@@ -1,11 +1,11 @@
 import mysql from 'mysql'
 
-const connection = mysql.createConnection({
+// export const connection = mysql.createConnection(options)
+
+export const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'docker',
   database: 'ruptiva',
-  multipleStatements: true
+  connectionLimit: 10
 })
-
-export default connection
