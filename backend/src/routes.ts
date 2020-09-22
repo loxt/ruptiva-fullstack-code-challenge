@@ -11,7 +11,13 @@ router.post(
   celebrate({
     [Segments.BODY]: Joi.object().keys({
       name: Joi.string().required().min(4).max(150),
-      password: Joi.string().required().min(8).max(150)
+      password: Joi.string()
+        .required()
+        .min(8)
+        .max(150)
+        .regex(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z)(?=.*[a-z]).*$/, {
+          name: 'too weak password'
+        })
     })
   }),
   UsersController.signUp
