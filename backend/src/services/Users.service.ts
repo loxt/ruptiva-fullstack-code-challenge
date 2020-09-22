@@ -15,20 +15,33 @@ function getUsers() {
 }
 
 function signupUser(user: User): Promise<User | string | number> {
-  return new Promise((resolve) => {
-    bcrypt.hash(user.password, 10).then((password) => {
-      pool.query(
-        `INSERT IGNORE INTO users (id, name, password) VALUES (DEFAULT, '${user.name}', '${password}');`,
+  try {
+    return new Promise((resolve) => {
+      bcrypt.hash(user.password, 10).then((password) => {
+        pool.query(
+          `INSERT IGNORE INTO users (id, name, password) VALUES (DEFAULT, '${user.name}', '${password}');`,
 
-        (err, rows) => {
-          if (err) {
-            return resolve(String(err))
+          (err, rows) => {
+            if (err) {
+              return resolve(String(err))
+            }
+            return resolve(rows.affectedRows)
           }
-          return resolve(rows.affectedRows)
-        }
-      )
+        )
+      })
     })
-  })
+  } catch (e) {
+    return e
+  }
 }
 
-export { getUsers, signupUser }
+function deleteUser(id: number): {} {
+  try {
+    const affectedRows = pool.query(`DELETE FROM users WHERE id = ${id};`)
+    return { msg: `user with id ${id} has been deleted` }
+  } catch (e) {
+    return e
+  }
+}
+
+export { getUsers, signupUser, deleteUser }

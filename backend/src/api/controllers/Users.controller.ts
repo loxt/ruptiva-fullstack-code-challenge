@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { getUsers, signupUser } from '../../services/Users.service'
+import { deleteUser, getUsers, signupUser } from '../../services/Users.service'
 import { User } from '../../services/entities/User.entity'
 
 export default {
@@ -15,5 +15,10 @@ export default {
       return res.status(400).json({ error: 'User already exists' })
 
     return res.status(200).json({ createdUser })
+  },
+
+  async deleteUser(req: Request, res: Response) {
+    const id = req.params.id
+    return res.status(200).json(deleteUser(+id))
   }
 }

@@ -23,4 +23,14 @@ router.post(
   UsersController.signUp
 )
 
+router.delete(
+  '/user/delete/:id',
+  celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+      id: Joi.number().required()
+    })
+  }),
+  UsersController.deleteUser
+)
+
 export default router
