@@ -1,8 +1,13 @@
 import express from 'express'
 import { celebrate, Joi, Segments } from 'celebrate'
 import UsersController from './api/controllers/Users.controller'
+import CarsController from './api/controllers/Cars.controller'
 
 const router = express.Router()
+
+/////////////////////
+//      Users      //
+/////////////////////
 
 router.get('/users', UsersController.index)
 
@@ -32,5 +37,11 @@ router.delete(
   }),
   UsersController.deleteUser
 )
+
+/////////////////////
+//      Cars       //
+/////////////////////
+
+router.get('/cars', CarsController.index)
 
 export default router

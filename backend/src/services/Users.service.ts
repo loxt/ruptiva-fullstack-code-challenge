@@ -37,10 +37,12 @@ function signupUser(user: User): Promise<User | string | number> {
 
 function deleteUser(id: number): {} {
   try {
-    const affectedRows = pool.query(`DELETE FROM users WHERE id = ${id};`)
-    return { msg: `user with id ${id} has been deleted` }
+    pool.query(`DELETE FROM users WHERE id = ${id};`)
+    return {
+      msg: `user with id ${id} has been deleted`
+    }
   } catch (e) {
-    return e
+    return { error: e }
   }
 }
 
