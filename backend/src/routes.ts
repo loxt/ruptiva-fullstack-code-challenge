@@ -43,5 +43,6 @@ router.delete(
 /////////////////////
 
 router.get('/cars', CarsController.index)
+router.post('/car/post', CarsController.post)
 
 export default router

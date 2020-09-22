@@ -3,4 +3,5 @@ export class Car {
   manufacturer: string
   hp: number
   price: number
+  image: string
 }

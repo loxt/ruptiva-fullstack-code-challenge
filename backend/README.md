@@ -18,7 +18,8 @@ Para criar o banco de dados, necessitamos do **Docker** e **docker-compose**!
      `manufacturer` varchar(150) NOT NULL,
      `hp` double(6, 1) NOT NULL,
      `price` double(20, 2) NOT NULL,
-     PRIMARY KEY (`id`)
+     `image varchar(255) null`
+      PRIMARY KEY (`id`)
    ) ENGINE=MyISAM  DEFAULT CHARSET=utf8
     ``<br />
     
