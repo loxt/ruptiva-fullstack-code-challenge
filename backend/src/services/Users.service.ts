@@ -1,11 +1,12 @@
 import connection from '../config/Connection'
+import { Response } from 'express'
 
-export class UsersService {
-  async getUsers() {
-    connection.query('SELECT * FROM users', (err, rows, fields) => {
-      if (err) throw err
-      console.log('The solution is: ', rows[0].solution)
-      console.log('The fields is: ', fields)
-    })
-  }
+export function getUsers(res: Response) {
+  const test = connection.query('SELECT id, name FROM users', (err, rows) => {
+    if (err) {
+      res.status(500).json({ err })
+      throw err
+    }
+    return res.status(200).json({ users: rows })
+  })
 }

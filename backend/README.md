@@ -1,7 +1,5 @@
 "TypeORM ~~são meus ovos~~" - Super Xandão
 
-Utilizei de POO pois seria estupidez o contrário.
-
 Para criar o banco de dados, necessitamos do **Docker** e **docker-compose**!
 
 **Criando o banco de dados**:
