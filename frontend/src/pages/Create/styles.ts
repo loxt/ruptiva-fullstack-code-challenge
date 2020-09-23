@@ -30,7 +30,6 @@ export const Container = styled.div`
   border-radius: 1rem;
   padding: 5rem;
 
-  height: 45rem;
   width: 50rem;
   max-width: 60vw;
 

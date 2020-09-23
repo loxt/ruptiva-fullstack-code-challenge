@@ -43,7 +43,7 @@ export default function Home() {
       <Items>
         {vehicles &&
           vehicles.map((v: any) => (
-            <Item>
+            <Item key={v.id}>
               <Image
                 src={
                   v.image

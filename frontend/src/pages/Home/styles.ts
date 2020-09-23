@@ -58,7 +58,7 @@ export const Infos = styled.div`
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
   grid-gap: 1.5rem 5rem;
 
-  & > *:not(:last-child) {
+  & > * {
     display: flex;
     flex-direction: column;
   }
@@ -86,9 +86,6 @@ export const Price = styled.h4`
   font-size: 1.7rem;
   font-weight: bold;
   color: #ff7e67;
-
-  display: flex;
-  flex-direction: column;
 
   & > span {
     font-weight: 300;
