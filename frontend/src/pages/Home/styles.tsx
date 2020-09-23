@@ -25,7 +25,6 @@ export const Items = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    margin: 0;
     padding-top: 3rem;
   }
 `
