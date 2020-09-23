@@ -39,13 +39,17 @@ export const Item = styled.div`
 `
 
 export const Image = styled.img`
-  width: 100%;
   background-color: #000;
+  width: 100%;
+  height: 100%;
+  max-height: 17rem;
+  object-fit: cover;
 
   margin-bottom: 1.5rem;
 
   display: grid;
-  grid-column: 1 / -1;
+  grid-row: 1 / auto;
+  grid-column: 1 / 3;
 `
 
 export const Infos = styled.div`
@@ -71,7 +75,7 @@ export const Price = styled.h4`
   font-weight: 300;
   color: #ff7e67;
 `
-export const HorsePower = styled.h4`
+export const CC = styled.h4`
   font-size: 1.7rem;
   font-weight: 300;
   color: #ff7e67;
@@ -95,4 +99,12 @@ export const Button = styled.button`
   grid-column: 1 / -1;
 
   cursor: pointer;
+
+  &::after,
+  &::before,
+  &:link,
+  &:visited,
+  &:focus {
+    outline: 0;
+  }
 `
