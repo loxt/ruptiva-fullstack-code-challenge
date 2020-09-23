@@ -57,28 +57,52 @@ export const Infos = styled.div`
 
   display: grid;
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
-  grid-column-gap: 5rem;
+  grid-gap: 1.5rem 5rem;
+
+  & > *:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const Name = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #006a71;
+
+  & > span {
+    font-weight: 300;
+  }
 `
 export const Manufacturer = styled.h3`
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: bold;
   color: #006a71;
+
+  & > span {
+    font-weight: 300;
+  }
 `
 export const Price = styled.h4`
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: bold;
   color: #ff7e67;
+
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    font-weight: 300;
+  }
 `
 export const CC = styled.h4`
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: bold;
   color: #ff7e67;
+
+  & > span {
+    font-weight: 300;
+  }
 `
 
 export const Button = styled.button`
@@ -89,9 +113,9 @@ export const Button = styled.button`
   color: #fff;
   background-color: #ff7e67;
 
-  display: grid;
+  display: grid !important;
   width: 100%;
-  padding: 1rem;
+  padding: 1.13rem;
 
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;

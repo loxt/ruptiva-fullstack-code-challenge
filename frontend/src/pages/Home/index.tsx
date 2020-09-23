@@ -52,10 +52,22 @@ export default function Home() {
                 }
               />
               <Infos>
-                <Name>{v.name}</Name>
-                <Manufacturer>{v.manufacturer}</Manufacturer>
-                <CC>{v.hp}</CC>
-                <Price>R$ {v.price}</Price>
+                <Name>
+                  Veículo
+                  <span>{v.name}</span>
+                </Name>
+                <Manufacturer>
+                  Fabricante
+                  <span>{v.manufacturer}</span>
+                </Manufacturer>
+                <CC>
+                  CC / HP
+                  <span>{v.hp}</span>
+                </CC>
+                <Price>
+                  Valor
+                  <span>{v.price}</span>
+                </Price>
               </Infos>
               <Button>Comprar</Button>
             </Item>
