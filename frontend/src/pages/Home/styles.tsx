@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: #f9f9f9;
-
   display: grid;
-  grid-template-rows: 5vh min-content;
+  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
 `
 
 export const Items = styled.div`
@@ -14,15 +13,28 @@ export const Items = styled.div`
   display: grid;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   grid-gap: 2rem;
-  grid-template-rows: repeat(auto-fit, minmax(35vh, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(min-content, 10vh));
   grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
+  justify-content: center;
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, min-content);
+  }
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(auto-fit, min-content);
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 0;
+    padding-top: 3rem;
+  }
 `
 
 export const Item = styled.div`
   background-color: #f9f9f9;
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
   border-radius: 1rem;
 `
 
@@ -37,10 +49,11 @@ export const Image = styled.img`
 `
 
 export const Infos = styled.div`
-  margin-left: 2rem;
+  margin-left: 3rem;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  grid-column-gap: 5rem;
 `
 
 export const Name = styled.h3`

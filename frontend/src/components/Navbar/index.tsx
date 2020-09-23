@@ -1,11 +1,12 @@
 import React from 'react'
-import { Button, Container } from './styles'
+import { Button, Container, Title } from './styles'
 
 function Navbar() {
   return (
     <Container>
-      Você não está logado!
+      <Title>Não logado!</Title>
       <Button>Entrar</Button>
+      <Button>Cadastrar</Button>
     </Container>
   )
 }
