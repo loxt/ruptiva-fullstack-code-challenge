@@ -116,8 +116,9 @@ function Create() {
               zIndex: 10
             }}
             to={'/'}
+            onClick={submitForm}
           >
-            <Button onClick={submitForm}>Criar</Button>
+            <Button>Criar</Button>
           </Link>
         </Form>
       </Container>

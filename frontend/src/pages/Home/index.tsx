@@ -22,7 +22,7 @@ export default function Home() {
     api.get('/cars').then(({ data }) => {
       setVehicles(data.cars)
     })
-  }, [])
+  }, [vehicles])
 
   return (
     <Container>
