@@ -27,6 +27,11 @@ export const Items = styled.div`
   @media only screen and (max-width: 600px) {
     padding-top: 3rem;
   }
+
+  @media only screen and (max-width: 350px) {
+    padding: 0;
+    margin: 8vh 0 0 0;
+  }
 `
 
 export const Item = styled.div`
@@ -119,12 +124,4 @@ export const Button = styled.button`
   grid-column: 1 / -1;
 
   cursor: pointer;
-
-  &::after,
-  &::before,
-  &:link,
-  &:visited,
-  &:focus {
-    outline: 0;
-  }
 `

@@ -40,7 +40,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 450px) {
     width: 100%;
-    height: 60rem;
+    height: 70rem;
     font-size: 4rem;
   }
 
@@ -77,7 +77,7 @@ export const Input = styled.input`
   @media only screen and (max-width: 350px) {
     width: 100%;
     height: 3rem;
-    margin-top: -3rem;
+    margin-top: -2rem;
   }
 
   &::placeholder {

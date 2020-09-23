@@ -19,6 +19,11 @@ export const Container = styled.div`
   @media only screen and (max-width: 600px) {
     border-radius: 0;
   }
+
+  @media only screen and (max-width: 350px) {
+    padding: 0;
+    font-size: 1.5rem;
+  }
 `
 
 export const Title = styled.h1`
@@ -28,6 +33,10 @@ export const Title = styled.h1`
   @media only screen and (max-width: 770px) {
     flex: 0 0 50%;
     font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 1.5rem;
   }
 `
 
@@ -46,5 +55,9 @@ export const Button = styled.button`
   &:not(:last-child) {
     margin-left: 10rem;
     background-color: #006a71;
+
+    @media only screen and (max-width: 350px) {
+      margin-left: -1rem;
+    }
   }
 `
